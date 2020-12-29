@@ -1,0 +1,38 @@
+{
+  "name": "component-library",
+  "version": "1.0.0",
+  "description": "html5 custom component library",
+  "main": "dist/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --fix './**/*.js' && stylelint --fix './**/*.scss' && prettier --write './**/*.{json,md}'",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gchatterjee/component-library.git"
+  },
+  "keywords": [
+    "custom",
+    "component",
+    "library"
+  ],
+  "author": "Gaurav Chatterjee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gchatterjee/component-library/issues"
+  },
+  "homepage": "https://github.com/gchatterjee/component-library#readme",
+  "devDependencies": {
+    "eslint": "^7.16.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-prettier": "^3.3.0",
+    "prettier": "^2.2.1",
+    "prettier-eslint": "^12.0.0",
+    "stylelint": "^13.8.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-prettier": "^1.1.2",
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.0"
+  }
+}
