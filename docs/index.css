@@ -1,0 +1,17 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #d7b49eff;
+}
+
+gchatterjee-slide-container {
+  background-color: #d7b49eff;
+}
+
+/*# sourceMappingURL=index.css.map */

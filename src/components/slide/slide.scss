@@ -1,0 +1,32 @@
+$fade-time: 1s;
+
+:host {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  opacity: 0;
+  transition: opacity $fade-time, visibility 0s $fade-time;
+  visibility: hidden;
+}
+
+:host(.active) {
+  transition: opacity $fade-time;
+  opacity: 100%;
+  visibility: visible;
+}
+
+#slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#content::slotted(*) {
+  text-align: center;
+  flex: auto;
+}

@@ -1,0 +1,18 @@
+$fade-time: 1s;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+
+  div.circle {
+    opacity: 50%;
+    transition: opacity $fade-time;
+  }
+
+  div.circle.active {
+    opacity: 100%;
+  }
+}
