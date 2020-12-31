@@ -1,11 +1,11 @@
 <div id="slide-container">
-  <div id="toc">
-    <slot name="toc"></slot> 
-  </div>
-  <div id="viewport">
-    <slot id="slides"></slot>
-  </div>
   <div id="outer-container">
+    <div id="viewport">
+      <slot id="slides"></slot>
+      <div id="toc">
+        <slot name="toc"></slot> 
+      </div>
+    </div>
     <div id="inner-container"></div>
   </div>
 </div>

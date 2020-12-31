@@ -32,29 +32,33 @@ class SlideContainer extends HTMLElement {
 
   setHeight() {
     const innerContainer = this.shadowRoot.querySelector('#inner-container')
-    const slides = this.querySelectorAll('gchatterjee-slide')
+    const slides = this.querySelectorAll(':scope > gchatterjee-slide')
     innerContainer.style.height = `${slides.length * 100}%`
     setTimeout(this.setCurrentSlide.bind(this), 0)
   }
 
   setCurrentSlide() {
     const outerContainer = this.shadowRoot.querySelector('#outer-container')
+    const viewport = this.shadowRoot.querySelector('#viewport')
     const visibleSlide = Math.round(
       outerContainer.offsetHeight
         ? outerContainer.scrollTop / outerContainer.offsetHeight
         : undefined
     )
+    viewport.style.top = `${outerContainer.scrollTop}px`
 
     if (visibleSlide !== this.activeSlide) {
       this.activeSlide = visibleSlide
-      const slides = this.querySelectorAll('gchatterjee-slide')
+      const slides = this.querySelectorAll(':scope > gchatterjee-slide')
       slides.forEach((slide, i) => {
         if (i === visibleSlide) slide.classList.add('active')
         else slide.classList.remove('active')
       })
       const toc = this.querySelector('gchatterjee-circle-toc[slot=toc]')
-      toc.setAttribute('number', `${visibleSlide}`)
-      toc.setAttribute('of', slides.length)
+      if (toc) {
+        toc.setAttribute('number', `${visibleSlide}`)
+        toc.setAttribute('of', slides.length)
+      }
     }
   }
 }

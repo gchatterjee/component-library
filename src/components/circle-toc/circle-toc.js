@@ -33,7 +33,6 @@ class CircleToc extends HTMLElement {
   }
 
   attributeChangedCallback(attributeName, oldValue, newValue) {
-    console.log(`another one: ${attributeName}`)
     const indicator = parseInt(this.getAttribute('number'), 10)
     const count = parseInt(this.getAttribute('of'), 10)
     switch (attributeName) {

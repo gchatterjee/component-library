@@ -9,25 +9,34 @@
     display: flex;
     align-items: center;
 
-    #toc {
-      position: absolute;
-    }
-
-    #viewport {
-      overflow: hidden;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-    }
-
     #outer-container {
       position: relative;
       width: 100%;
       height: 100%;
       overflow-y: scroll;
 
+      #viewport {
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+
+        #toc {
+          position: absolute;
+        }
+
+        slot::slotted(gchatterjee-slide) {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
       #inner-container {
-        width: 0;
+        visibility: hidden;
       }
     }
   }

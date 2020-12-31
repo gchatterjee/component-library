@@ -8,6 +8,7 @@ $fade-time: 1s;
   padding: 10px;
 
   div.circle {
+    font-family: Calibri, sans-serif;
     opacity: 50%;
     transition: opacity $fade-time;
   }

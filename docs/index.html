@@ -3,17 +3,29 @@
   <head>
     <title>Component Library | gchatterjee</title>
     <script src="main.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla&family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="index.css"></link>
+    
   </head>
   <body>
-    <gchatterjee-slide-container>
-      <gchatterjee-circle-toc slot="toc"></gchatterjee-circle-toc>
-      <gchatterjee-slide>
-        <div>First Slide</div>
-      </gchatterjee-slide>
-      <gchatterjee-slide>
-        <div>Last Slide</div>
-      </gchatterjee-slide>
-    </gchatterjee-slide-container>
+    <div id="container">
+      <gchatterjee-slide-container>
+        <!-- <gchatterjee-circle-toc slot="toc" alignment="left" id="page-toc"></gchatterjee-circle-toc> -->
+        <gchatterjee-slide id="page-intro">
+          <div>
+            <h1 class="title">gchatterjee component library</h1>
+            <p><a href="https://gchatterjee.github.io">Gaurav Chatterjee</a>&apos;s personal library of HTML5 custom components.</p>
+          </div>
+        </gchatterjee-slide>
+        <gchatterjee-slide>
+          <div class="demo">
+            <gchatterjee-slide-container>
+              <gchatterjee-slide>This is a slide</gchatterjee-slide>
+            </gchatterjee-slide-container>
+          </div>
+        </gchatterjee-slide>
+      </gchatterjee-slide-container>
+    </div>
   </body>
 </html>
