@@ -48,15 +48,15 @@ class SlideContainer extends HTMLElement {
     viewport.style.top = `${outerContainer.scrollTop}px`
 
     if (visibleSlide !== this.activeSlide) {
-      this.activeSlide = visibleSlide
+      this.activeSlide = visibleSlide || 0
       const slides = this.querySelectorAll(':scope > gchatterjee-slide')
       slides.forEach((slide, i) => {
-        if (i === visibleSlide) slide.classList.add('active')
+        if (i === this.activeSlide) slide.classList.add('active')
         else slide.classList.remove('active')
       })
       const toc = this.querySelector('gchatterjee-circle-toc[slot=toc]')
       if (toc) {
-        toc.setAttribute('number', `${visibleSlide}`)
+        toc.setAttribute('number', `${this.activeSlide}`)
         toc.setAttribute('of', slides.length)
       }
     }

@@ -4,25 +4,57 @@
     <title>Component Library | gchatterjee</title>
     <script src="main.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Karla&family=Montserrat" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla&family=Montserrat&family=Overpass+Mono&display=swap"
+      rel="stylesheet"
+    ></link>
     <link rel="stylesheet" type="text/css" href="index.css"></link>
     
   </head>
   <body>
     <div id="container">
       <gchatterjee-slide-container>
-        <!-- <gchatterjee-circle-toc slot="toc" alignment="left" id="page-toc"></gchatterjee-circle-toc> -->
-        <gchatterjee-slide id="page-intro">
-          <div>
+        <gchatterjee-circle-toc slot="toc" alignment="left" class="hot"></gchatterjee-circle-toc>
+        <gchatterjee-slide class="neutral">
+          <div class="slide-contents">
             <h1 class="title">gchatterjee component library</h1>
-            <p><a href="https://gchatterjee.github.io">Gaurav Chatterjee</a>&apos;s personal library of HTML5 custom components.</p>
+            <p>
+              <a href="https://gchatterjee.github.io">Gaurav Chatterjee</a>&apos;s personal library
+              of HTML5 custom components.
+            </p>
           </div>
         </gchatterjee-slide>
-        <gchatterjee-slide>
-          <div class="demo">
-            <gchatterjee-slide-container>
-              <gchatterjee-slide>This is a slide</gchatterjee-slide>
-            </gchatterjee-slide-container>
+        <gchatterjee-slide class="cool">
+          <div class="slide-contents">
+            <div class="demo demo-title"><h2 class="title">gchatterjee slide</h2></div>
+            <div class="demo demo-description">
+              The <code>gchatterjee-slide</code> component should be used in conjunction with the 
+              <code>gchatterjee-slide-container</code> component. Together, the components create an
+              element with quantized scrolling. Content inside the <code>gchatterjee-slide</code> is
+              centered vertically and horizontally by default.
+            </div>
+            <div class="demo demo-code-block">
+              <code>
+                &lt;gchatterjee-slide-container&gt;<br/>
+                &nbsp;&nbsp;&lt;gchatterjee-slide&gt;&lt;div&gt;This is a slide.&lt;/div&gt;&lt;/gchatterjee-slide&gt;<br/>
+                &nbsp;&nbsp;&lt;gchatterjee-slide&gt;&lt;div&gt;This is another slide.&lt;/div&gt;&lt;/gchatterjee-slide&gt;<br/>
+                &nbsp;&nbsp;&lt;gchatterjee-slide&gt;&lt;div&gt;This is the last slide.&lt;/div&gt;&lt;/gchatterjee-slide&gt;<br/>
+                &lt;/gchatterjee-slide-container&gt;
+              </code>
+            </div>
+            <div class="demo demo-area">
+              <gchatterjee-slide-container>
+                <gchatterjee-slide class="hot">
+                  <div>This is a slide.</div>
+                </gchatterjee-slide>
+                <gchatterjee-slide class="warm">
+                  <div>This is another slide.</div>
+                </gchatterjee-slide>
+                <gchatterjee-slide class="hot">
+                  <div>This is the last slide.</div>
+                </gchatterjee-slide>
+              </gchatterjee-slide-container>
+            </div>
           </div>
         </gchatterjee-slide>
       </gchatterjee-slide-container>
