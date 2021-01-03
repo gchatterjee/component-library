@@ -14,27 +14,34 @@
   <body>
     <div id="container">
       <gchatterjee-slide-container>
-        <!-- <gchatterjee-circle-toc slot="toc" alignment="left" class="hot"></gchatterjee-circle-toc> -->
+        <gchatterjee-circle-toc slot="toc" alignment="left" class="hot">
+        </gchatterjee-circle-toc>
 
         <gchatterjee-slide class="neutral">
           <div class="slide-contents">
             <h1 class="title">gchatterjee component library</h1>
             <p>
-              <a href="https://gchatterjee.github.io">Gaurav Chatterjee</a>&apos;s personal library
-              of HTML5 custom components.
+              <a href="https://gchatterjee.github.io">Gaurav Chatterjee</a>
+              &apos;s personal library of HTML5 custom components.
             </p>
           </div>
         </gchatterjee-slide>
 
         <gchatterjee-slide class="cool">
           <div class="slide-contents">
-            <div class="demo demo-title"><h2 class="title">gchatterjee-slide</h2></div>
-            <div class="demo demo-description">
-              The <code>gchatterjee-slide</code> component should be used in conjunction with the 
-              <code>gchatterjee-slide-container</code> component. Together, the components create an
-              element with quantized scrolling. Content inside the <code>gchatterjee-slide</code> is
-              centered vertically and horizontally by default.
+            <div class="demo demo-title">
+              <h2 class="title">gchatterjee-slide</h2>
             </div>
+            <div class="demo demo-description">
+              The <code>gchatterjee-slide</code> component should be used in
+              conjunction with the <code>gchatterjee-slide-container</code>
+              component. Together, the components create an element with
+              quantized scrolling. Content inside the
+              <code>gchatterjee-slide</code> is centered vertically and
+              horizontally by default.
+            </div>
+            <div class="warm demo demo-block"><strong>WARNING:</strong> Does not work cross browser, especially on mobile.</div>
+            <div class="warm demo demo-block"><strong>WARNING:</strong> No support for linking to sections.</div>
             <div class="demo demo-code-block">
               <code>
                 &lt;gchatterjee-slide-container&gt;<br/>
@@ -43,6 +50,10 @@
                 &nbsp;&nbsp;&lt;gchatterjee-slide&gt;&lt;div&gt;This is the last slide.&lt;/div&gt;&lt;/gchatterjee-slide&gt;<br/>
                 &lt;/gchatterjee-slide-container&gt;
               </code>
+            </div>
+            <div class="neutral demo demo-block">
+              <strong>DEMO:</strong> Scroll inside the element below to see a
+              cycle of slides.
             </div>
             <div class="demo demo-area">
               <gchatterjee-slide-container>
@@ -62,22 +73,59 @@
 
         <gchatterjee-slide class="warm">
           <div class="slide-contents">
-            <div class="demo demo-title"><h2 class="title">gchatterjee-circle-toc</h2></div>
+            <div class="demo demo-title">
+              <h2 class="title">gchatterjee-circle-toc</h2>
+            </div>
             <div class="demo demo-description">
-              (Some information about <code>gchatterjee-circle-toc</code>)
+              The <code>gchatterjee-circle-toc</code> element creates an
+              element to allow navigation through the page.
+              <code>gchatterjee-circle-toc</code> supports the following
+              attributes:
+              <ul>
+                <li>
+                  <code>number</code> specifies the active circle, starting at
+                  index 0.
+                </li>
+                <li><code>of</code> specifies the total number of circles</li>
+                <li>
+                  <code>alignment</code> determines the side on which tooltips
+                  appear. The value signifies the side of the parent element
+                  at which the <code>gchatterjee-circle-toc</code> is placed.
+                </li> 
+              </ul>
+              <code>gchatterjee-circle-toc</code> includes one slot named
+              <code>section-title</code>. Elements slotted in this slot will be
+              displayed as the tooltips, in the order in which they are slotted.
+              An empty element signifies that a tooltip should not be displayed.
+              Slotting no elements will result in no tooltips. 
             </div>
             <div class="demo demo-code-block">
               <code>
-                (some code showing how to use gchatterjee-circle-toc)
+                &lt;gchatterjee-circle-toc number=&quot;1&quot; of=&quot;4&quot; alignment=&quot;right&quot;&gt;<br />
+                &nbsp;&nbsp;&lt;span slot=&quot;section-title&quot; href=&quot;https://www.example.com&quot;&gt;example.com&lt;/span&gt;<br />
+                &nbsp;&nbsp;&lt;span slot=&quot;section-title&quot;&gt;no hyperlink&lt;/span&gt;<br />
+                &nbsp;&nbsp;&lt;span slot=&quot;section-title&quot;&gt;&lt;/span&gt;<br />
+                &nbsp;&nbsp;&lt;span slot=&quot;section-title&quot;&gt;fourth label&lt;/span&gt;<br />
+                &lt;/gchatterjee-circle-toc&gt;
               </code>
             </div>
+            <div class="neutral demo demo-block">
+              <strong>DEMO:</strong> Hover over the circes in the element to see
+              the effect.
+            </div>
             <div class="demo demo-area cool" id="circle-toc-demo">
-              <gchatterjee-circle-toc number="2" of="5" class="cold">
-                <span slot="section-title" href="https://www.google.com">Google</span>
-                <span slot="section-title">Section B</span>
-                <span slot="section-title">Section C</span>
-                <span slot="section-title">Section D</span>
-                <span slot="section-title">Section E</span>
+              <gchatterjee-circle-toc
+                number="1"
+                of="4"
+                alignment="right"
+                class="cold"
+              >
+                <span slot="section-title" href="https://www.example.com">
+                  example.com
+                </span>
+                <span slot="section-title">no hyperlink</span>
+                <span slot="section-title"></span>
+                <span slot="section-title">fourth label</span>
               </gchatterjee-circle-toc>
             </div>
           </div>

@@ -59,37 +59,39 @@ class CircleToc extends HTMLElement {
     circles.forEach((_, i) => {
       const contents = template.content.cloneNode(true)
       const title = this.children.item(i)
+      const sectionTitleSpan = contents.querySelector('span.section-title')
       if (title) {
-        contents.querySelector('span.section-title').innerText =
-          title.textContent
-      }
-      if (title && title.getAttribute('href')) {
-        contents.querySelector(
-          'span.bullet'
-        ).innerHTML = `<a href="${title.getAttribute('href')}">&bull;</a>`
-      }
+        const text = title.textContent.trim()
+        if (text !== '') sectionTitleSpan.innerText = text
+        else sectionTitleSpan.remove()
+        if (title.getAttribute('href')) {
+          contents.querySelector(
+            'span.bullet'
+          ).innerHTML = `<a href="${title.getAttribute('href')}">&bull;</a>`
+        }
+      } else sectionTitleSpan.remove()
       elements.appendChild(contents)
     })
     container.appendChild(elements)
     this.setActiveCircle(indicator)
   }
 
-  // attributeChangedCallback(attributeName, oldValue, newValue) {
-  //   const indicator = parseInt(this.getAttribute('number'), 10)
-  //   const count = parseInt(this.getAttribute('of'), 10)
-  //   switch (attributeName) {
-  //     case 'number':
-  //       if (oldValue !== newValue && !isNaN(indicator) && !isNaN(count))
-  //         this.setActiveCircle(indicator)
-  //       break
-  //     case 'of':
-  //       if (oldValue !== newValue && !isNaN(indicator) && !isNaN(count))
-  //         this.renderIndicatorCircles(count, indicator)
-  //       break
-  //     default:
-  //       return
-  //   }
-  // }
+  attributeChangedCallback(attributeName, oldValue, newValue) {
+    const indicator = parseInt(this.getAttribute('number'), 10)
+    const count = parseInt(this.getAttribute('of'), 10)
+    switch (attributeName) {
+      case 'number':
+        if (oldValue !== newValue && !isNaN(indicator) && !isNaN(count))
+          this.setActiveCircle(indicator)
+        break
+      case 'of':
+        if (oldValue !== newValue && !isNaN(indicator) && !isNaN(count))
+          this.renderIndicatorCircles(count, indicator)
+        break
+      default:
+        return
+    }
+  }
 }
 
 customElements.define('gchatterjee-circle-toc', CircleToc)

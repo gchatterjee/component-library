@@ -1,5 +1,5 @@
 $fade-time: 1s;
-$hover-time: 5s;
+$hover-time: 500ms;
 
 :host {
   display: flex;
@@ -30,6 +30,7 @@ $hover-time: 5s;
     }
 
     span.section-title {
+      position: absolute;
       display: inline-block;
       transition-property: opacity, max-width, padding, margin;
       transition-delay: 0s, $hover-time, $hover-time, $hover-time;
@@ -56,13 +57,21 @@ $hover-time: 5s;
       transition: opacity $hover-time;
       margin: 0 3px;
       padding: 3px;
-      max-width: 100%;
-      left: 1em;
+      max-width: 1000px;
       opacity: 100%;
     }
   }
 
   slot[name='section-title']::slotted(*) {
     display: none;
+  }
+}
+
+:host([alignment='right']) {
+  .contents {
+    span.section-title {
+      left: auto;
+      right: 1em;
+    }
   }
 }
