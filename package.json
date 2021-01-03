@@ -5,7 +5,7 @@
   "main": "dist/main.js",
   "scripts": {
     "test": "echo 'tests have not yet been configured'",
-    "lint": "eslint --fix './**/*.js' && stylelint --fix './**/*.scss' && prettier --write './**/*.{json,md}'",
+    "lint": "eslint --fix './**/*.js' && stylelint --fix './**/*.scss' && prettier --write './**/*.{json,md,html}'",
     "build": "webpack",
     "docs": "cp dist/main.js docs && sass docs/index.scss docs/index.css",
     "prepublishOnly": "npm run lint && npm run test && npm run build"

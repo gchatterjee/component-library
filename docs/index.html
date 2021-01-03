@@ -3,13 +3,12 @@
   <head>
     <title>Component Library | gchatterjee</title>
     <script src="main.js"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Karla&family=Montserrat&family=Overpass+Mono&display=swap"
       rel="stylesheet"
-    ></link>
-    <link rel="stylesheet" type="text/css" href="index.css"></link>
-    
+    />
+    <link rel="stylesheet" type="text/css" href="index.css" />
   </head>
   <body>
     <div id="container">
@@ -40,14 +39,22 @@
               <code>gchatterjee-slide</code> is centered vertically and
               horizontally by default.
             </div>
-            <div class="warm demo demo-block"><strong>WARNING:</strong> Does not work cross browser, especially on mobile.</div>
-            <div class="warm demo demo-block"><strong>WARNING:</strong> No support for linking to sections.</div>
+            <div class="warm demo demo-block">
+              <strong>WARNING:</strong> Does not work cross browser, especially
+              on mobile.
+            </div>
+            <div class="warm demo demo-block">
+              <strong>WARNING:</strong> No support for linking to sections.
+            </div>
             <div class="demo demo-code-block">
               <code>
-                &lt;gchatterjee-slide-container&gt;<br/>
-                &nbsp;&nbsp;&lt;gchatterjee-slide&gt;&lt;div&gt;This is a slide.&lt;/div&gt;&lt;/gchatterjee-slide&gt;<br/>
-                &nbsp;&nbsp;&lt;gchatterjee-slide&gt;&lt;div&gt;This is another slide.&lt;/div&gt;&lt;/gchatterjee-slide&gt;<br/>
-                &nbsp;&nbsp;&lt;gchatterjee-slide&gt;&lt;div&gt;This is the last slide.&lt;/div&gt;&lt;/gchatterjee-slide&gt;<br/>
+                &lt;gchatterjee-slide-container&gt;<br />
+                &nbsp;&nbsp;&lt;gchatterjee-slide&gt;&lt;div&gt;This is a
+                slide.&lt;/div&gt;&lt;/gchatterjee-slide&gt;<br />
+                &nbsp;&nbsp;&lt;gchatterjee-slide&gt;&lt;div&gt;This is another
+                slide.&lt;/div&gt;&lt;/gchatterjee-slide&gt;<br />
+                &nbsp;&nbsp;&lt;gchatterjee-slide&gt;&lt;div&gt;This is the last
+                slide.&lt;/div&gt;&lt;/gchatterjee-slide&gt;<br />
                 &lt;/gchatterjee-slide-container&gt;
               </code>
             </div>
@@ -77,8 +84,8 @@
               <h2 class="title">gchatterjee-circle-toc</h2>
             </div>
             <div class="demo demo-description">
-              The <code>gchatterjee-circle-toc</code> element creates an
-              element to allow navigation through the page.
+              The <code>gchatterjee-circle-toc</code> element creates an element
+              to allow navigation through the page.
               <code>gchatterjee-circle-toc</code> supports the following
               attributes:
               <ul>
@@ -89,23 +96,28 @@
                 <li><code>of</code> specifies the total number of circles</li>
                 <li>
                   <code>alignment</code> determines the side on which tooltips
-                  appear. The value signifies the side of the parent element
-                  at which the <code>gchatterjee-circle-toc</code> is placed.
-                </li> 
+                  appear. The value signifies the side of the parent element at
+                  which the <code>gchatterjee-circle-toc</code> is placed.
+                </li>
               </ul>
               <code>gchatterjee-circle-toc</code> includes one slot named
               <code>section-title</code>. Elements slotted in this slot will be
               displayed as the tooltips, in the order in which they are slotted.
               An empty element signifies that a tooltip should not be displayed.
-              Slotting no elements will result in no tooltips. 
+              Slotting no elements will result in no tooltips.
             </div>
             <div class="demo demo-code-block">
               <code>
-                &lt;gchatterjee-circle-toc number=&quot;1&quot; of=&quot;4&quot; alignment=&quot;right&quot;&gt;<br />
-                &nbsp;&nbsp;&lt;span slot=&quot;section-title&quot; href=&quot;https://www.example.com&quot;&gt;example.com&lt;/span&gt;<br />
-                &nbsp;&nbsp;&lt;span slot=&quot;section-title&quot;&gt;no hyperlink&lt;/span&gt;<br />
-                &nbsp;&nbsp;&lt;span slot=&quot;section-title&quot;&gt;&lt;/span&gt;<br />
-                &nbsp;&nbsp;&lt;span slot=&quot;section-title&quot;&gt;fourth label&lt;/span&gt;<br />
+                &lt;gchatterjee-circle-toc number=&quot;1&quot; of=&quot;4&quot;
+                alignment=&quot;right&quot;&gt;<br />
+                &nbsp;&nbsp;&lt;span slot=&quot;section-title&quot;
+                href=&quot;https://www.example.com&quot;&gt;example.com&lt;/span&gt;<br />
+                &nbsp;&nbsp;&lt;span slot=&quot;section-title&quot;&gt;no
+                hyperlink&lt;/span&gt;<br />
+                &nbsp;&nbsp;&lt;span
+                slot=&quot;section-title&quot;&gt;&lt;/span&gt;<br />
+                &nbsp;&nbsp;&lt;span slot=&quot;section-title&quot;&gt;fourth
+                label&lt;/span&gt;<br />
                 &lt;/gchatterjee-circle-toc&gt;
               </code>
             </div>
@@ -130,7 +142,6 @@
             </div>
           </div>
         </gchatterjee-slide>
-
       </gchatterjee-slide-container>
     </div>
   </body>
