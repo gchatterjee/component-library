@@ -1,17 +1,25 @@
 {
   "name": "@gchatterjee/component-library",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "html5 custom component library",
   "main": "dist/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo 'tests have not yet been configured'",
     "lint": "eslint --fix './**/*.js' && stylelint --fix './**/*.scss' && prettier --write './**/*.{json,md}'",
     "build": "webpack",
-    "docs": "cp dist/main.js docs && sass docs/index.scss docs/index.css"
+    "docs": "cp dist/main.js docs && sass docs/index.scss docs/index.css",
+    "prepublishOnly": "npm run lint && npm run test && npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gchatterjee/component-library.git"
+  },
+  "files": [
+    "dist/main.js"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
   },
   "keywords": [
     "custom",
