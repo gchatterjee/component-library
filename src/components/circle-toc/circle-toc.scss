@@ -1,4 +1,5 @@
 $fade-time: 1s;
+$hover-time: 5s;
 
 :host {
   display: flex;
@@ -7,13 +8,61 @@ $fade-time: 1s;
   justify-content: center;
   padding: 10px;
 
-  div.circle {
-    font-family: Calibri, sans-serif;
-    opacity: 50%;
-    transition: opacity $fade-time;
+  .contents {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    span.bullet {
+      display: inline-block;
+      font-family: Calibri, sans-serif;
+      opacity: 25%;
+      transition: opacity $fade-time, transform $hover-time;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+
+    span.bullet.active {
+      opacity: 100%;
+    }
+
+    span.section-title {
+      display: inline-block;
+      transition-property: opacity, max-width, padding, margin;
+      transition-delay: 0s, $hover-time, $hover-time, $hover-time;
+      transition-duration: $hover-time, 0s, 0s, 0s;
+      border: 2px solid black;
+      border-radius: 2px;
+      background-color: black;
+      position: absolute;
+      opacity: 0;
+      max-width: 0;
+      overflow: hidden;
+      left: 1em;
+      white-space: nowrap;
+    }
   }
 
-  div.circle.active {
-    opacity: 100%;
+  .contents:hover {
+    span.bullet {
+      opacity: 100%;
+      transform: scale(1.5);
+    }
+
+    span.section-title {
+      transition: opacity $hover-time;
+      margin: 0 3px;
+      padding: 3px;
+      max-width: 100%;
+      left: 1em;
+      opacity: 100%;
+    }
+  }
+
+  slot[name='section-title']::slotted(*) {
+    display: none;
   }
 }

@@ -14,7 +14,8 @@
   <body>
     <div id="container">
       <gchatterjee-slide-container>
-        <gchatterjee-circle-toc slot="toc" alignment="left" class="hot"></gchatterjee-circle-toc>
+        <!-- <gchatterjee-circle-toc slot="toc" alignment="left" class="hot"></gchatterjee-circle-toc> -->
+
         <gchatterjee-slide class="neutral">
           <div class="slide-contents">
             <h1 class="title">gchatterjee component library</h1>
@@ -24,6 +25,7 @@
             </p>
           </div>
         </gchatterjee-slide>
+
         <gchatterjee-slide class="cool">
           <div class="slide-contents">
             <div class="demo demo-title"><h2 class="title">gchatterjee-slide</h2></div>
@@ -57,6 +59,30 @@
             </div>
           </div>
         </gchatterjee-slide>
+
+        <gchatterjee-slide class="warm">
+          <div class="slide-contents">
+            <div class="demo demo-title"><h2 class="title">gchatterjee-circle-toc</h2></div>
+            <div class="demo demo-description">
+              (Some information about <code>gchatterjee-circle-toc</code>)
+            </div>
+            <div class="demo demo-code-block">
+              <code>
+                (some code showing how to use gchatterjee-circle-toc)
+              </code>
+            </div>
+            <div class="demo demo-area cool" id="circle-toc-demo">
+              <gchatterjee-circle-toc number="2" of="5" class="cold">
+                <span slot="section-title" href="https://www.google.com">Google</span>
+                <span slot="section-title">Section B</span>
+                <span slot="section-title">Section C</span>
+                <span slot="section-title">Section D</span>
+                <span slot="section-title">Section E</span>
+              </gchatterjee-circle-toc>
+            </div>
+          </div>
+        </gchatterjee-slide>
+
       </gchatterjee-slide-container>
     </div>
   </body>

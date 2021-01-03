@@ -46,6 +46,10 @@ code {
   font-family: "Overpass Mono", monospace;
   font-size: 0.93em;
   color: darkslategrey;
+  background-color: rgba(255, 255, 255, 0.25);
+  background-clip: padding-box;
+  border: 3px solid rgba(255, 255, 255, 0.25);
+  border-radius: 3px;
 }
 
 gchatterjee-slide .slide-contents {
@@ -73,15 +77,25 @@ gchatterjee-slide .demo-code-block {
   box-sizing: border-box;
   text-align: left;
   margin-block-end: 0.83em;
-  background-color: lightgray;
-  border: lightgray solid 10px;
+  background-color: rgba(255, 255, 255, 0.25);
+  background-clip: padding-box;
+  border: 10px solid rgba(255, 255, 255, 0.25);
   border-radius: 10px;
+}
+gchatterjee-slide .demo-code-block code {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
 }
 gchatterjee-slide a {
   color: #bc412bff;
 }
 gchatterjee-slide a :visited {
   color: #dc602eff;
+}
+gchatterjee-slide #circle-toc-demo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=index.css.map */
