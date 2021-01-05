@@ -142,7 +142,33 @@
             </div>
           </div>
         </gchatterjee-slide>
+
+        <gchatterjee-slide class="hot">
+          <div class="slide-contents">
+            <div class="demo demo-title">
+              <h2 class="title">gchatterjee-link-bar</h2>
+            </div>
+            <div class="demo demo-description">
+              <code>gchatterjee-link-bar</code> allows <code>a</code> elements
+              to be slotted to form a horizontal menu that becomes smaller when
+              the div containing it is scrolled.
+            </div>
+            <div class="demo demo-code-block">
+              <code id="link-bar-code"></code>
+            </div>
+            <div class="demo demo-area cool" id="link-bar-demo">
+              <div id="link-bar-outer">
+                <gchatterjee-link-bar class="cold">
+                  <a slot="link" href="https://www.example.com/">EXAMPLE.COM</a>
+                  <a slot="link" href="#">EMPTY LINK</a>
+                </gchatterjee-link-bar>
+                <div id="link-bar-inner"></div>
+              </div>
+            </div>
+          </div>
+        </gchatterjee-slide>
       </gchatterjee-slide-container>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>

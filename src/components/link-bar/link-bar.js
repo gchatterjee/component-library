@@ -13,7 +13,16 @@ class LinkBar extends HTMLElement {
   }
 
   connectedCallback() {
-    this.shadowRoot.querySelector('slot[name=link]')
+    this.parentNode.addEventListener('scroll', this.adjustSize.bind(this))
+  }
+
+  adjustSize() {
+    const shouldBeShrunk = this.parentNode.scrollTop !== 0
+    if (shouldBeShrunk !== this.isShrunk) {
+      const action = shouldBeShrunk ? 'add' : 'remove'
+      this.classList[action]('shrunk')
+      this.isShrunk = shouldBeShrunk
+    }
   }
 }
 

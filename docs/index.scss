@@ -109,18 +109,35 @@ gchatterjee-slide {
     }
   }
 
-  a {
-    color: $color-hot;
-
-    :visited {
-      color: $color-warm;
-    }
-  }
-
   #circle-toc-demo {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
+  }
+
+  #link-bar-demo {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    #link-bar-outer {
+      flex: auto;
+      text-align: left;
+      overflow-y: scroll;
+    }
+
+    #link-bar-inner {
+      padding: 10px;
+      min-height: 200%;
+    }
+  }
+}
+
+gchatterjee-slide > a {
+  color: $color-hot;
+
+  :visited {
+    color: $color-warm;
   }
 }

@@ -102,17 +102,32 @@ gchatterjee-slide .demo-code-block code {
   background-color: rgba(0, 0, 0, 0);
   border: none;
 }
-gchatterjee-slide a {
-  color: #bc412bff;
-}
-gchatterjee-slide a :visited {
-  color: #dc602eff;
-}
 gchatterjee-slide #circle-toc-demo {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
+}
+gchatterjee-slide #link-bar-demo {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+gchatterjee-slide #link-bar-demo #link-bar-outer {
+  flex: auto;
+  text-align: left;
+  overflow-y: scroll;
+}
+gchatterjee-slide #link-bar-demo #link-bar-inner {
+  padding: 10px;
+  min-height: 200%;
+}
+
+gchatterjee-slide > a {
+  color: #bc412bff;
+}
+gchatterjee-slide > a :visited {
+  color: #dc602eff;
 }
 
 /*# sourceMappingURL=index.css.map */

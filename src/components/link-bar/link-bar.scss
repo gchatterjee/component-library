@@ -1,0 +1,46 @@
+:host {
+  width: 100%;
+
+  #container {
+    background-color: inherit;
+    transition-property: font-size, height;
+    transition-duration: 1s, 1s;
+    text-align: center;
+    font-size: 1.5em;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  slot {
+    background-color: inherit;
+  }
+
+  slot[name='link']::slotted(a) {
+    letter-spacing: 0.25em;
+    transition: filter 1s;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    color: inherit;
+    background-color: inherit;
+    text-decoration: none;
+  }
+
+  slot[name='link']::slotted(a:hover) {
+    filter: brightness(1.2);
+  }
+}
+
+:host(.shrunk) {
+  top: 0;
+  position: absolute;
+
+  #container {
+    font-size: 1em;
+    height: 1.5em;
+  }
+}
