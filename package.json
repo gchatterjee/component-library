@@ -1,6 +1,6 @@
 {
   "name": "@gchatterjee/component-library",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "html5 custom component library",
   "main": "dist/main.js",
   "scripts": {
@@ -15,7 +15,8 @@
     "url": "git+https://github.com/gchatterjee/component-library.git"
   },
   "files": [
-    "dist/main.js"
+    "dist/main.js",
+    "src"
   ],
   "publishConfig": {
     "registry": "https://npm.pkg.github.com",
