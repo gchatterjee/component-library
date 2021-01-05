@@ -9,10 +9,4 @@ Integer tempus mollis eros, at iaculis nisl hendrerit vel. Fusce consectetur pha
 Mauris non ex lacus. Nullam interdum, eros vitae semper mollis, felis mauris suscipit magna, non blandit nibh nibh ut metus. Mauris maximus orci risus, at consequat sem aliquam a. Sed mattis orci est, in consectetur sem aliquet ut. Proin venenatis tortor vel aliquet semper. Phasellus maximus arcu sit amet ultrices bibendum. Sed mauris dolor, lobortis fringilla lorem eu, finibus dapibus nisi. Mauris hendrerit diam est, sed elementum nisi ornare a. Cras eleifend vulputate lobortis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque ornare, odio id vestibulum imperdiet, sapien turpis lacinia orci, at tincidunt arcu nunc vel elit. Sed venenatis diam at volutpat faucibus. Donec quis mauris ac nulla consectetur hendrerit et sit amet purus.
 Nulla facilisi. Integer ultrices sapien nulla, eu bibendum nisi bibendum varius. Phasellus pharetra viverra ex vel suscipit. Vivamus venenatis tempor eros sit amet dictum. Integer tincidunt dui vulputate risus commodo semper. Integer at erat mollis, sagittis nisl id, faucibus metus. Nunc sollicitudin, enim id cursus suscipit, lorem velit posuere libero, ut elementum dolor dui id leo.`
 
-const linkBarCode = `<gchatterjee-link-bar class="cold">
-  <a slot="link" href="https://www.example.com/">EXAMPLE.COM</a>
-  <a slot="link" href="#">EMPTY LINK</a>
-</gchatterjee-link-bar>`
-
-document.querySelector('#link-bar-inner').innerText = loremIpsum
-document.querySelector('#link-bar-code').innerText = linkBarCode
+document.querySelector('#link-bar-inner').textContent = loremIpsum

@@ -71,7 +71,11 @@ gchatterjee-slide .demo {
   width: 80%;
 }
 gchatterjee-slide .demo-area {
+  box-sizing: border-box;
   height: 40%;
+  border-width: 10px;
+  border-style: solid;
+  border-radius: 10px;
 }
 gchatterjee-slide .demo-block {
   box-sizing: border-box;
