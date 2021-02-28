@@ -8,10 +8,38 @@
       href="https://fonts.googleapis.com/css2?family=Karla&family=Montserrat&family=Overpass+Mono&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://use.fontawesome.com/releases/v5.15.2/js/all.js"
+      data-auto-replace-svg="nest"
+    ></script>
     <link rel="stylesheet" type="text/css" href="index.css" />
   </head>
   <body>
-    <div id="container">
+    <gchatterjee-top-bar-page>
+      <gchatterjee-top-bar slot="top-bar" class="hot">
+        <gchatterjee-top-bar-item>
+          <div slot="icon" class="top-bar">
+            <span class="fab fa-linkedin"></span>
+          </div>
+          <div slot="text" class="top-bar">LinkedIn</div>
+        </gchatterjee-top-bar-item>
+        <gchatterjee-top-bar-item>
+          <div slot="icon" class="top-bar">
+            <span class="fab fa-github"></span>
+          </div>
+          <div slot="text" class="top-bar">GitHub</div>
+        </gchatterjee-top-bar-item>
+        <gchatterjee-top-bar-item>
+          <div slot="icon" class="top-bar">
+            <span class="fas fa-envelope"></span>
+          </div>
+          <div slot="text" class="top-bar">Email</div>
+        </gchatterjee-top-bar-item>
+      </gchatterjee-top-bar>
+      <div style="height: 1000px">Bar</div>
+    </gchatterjee-top-bar-page>
+
+    <!-- <div id="container">
       <gchatterjee-slide-container>
         <gchatterjee-circle-toc slot="toc" alignment="left" class="hot">
         </gchatterjee-circle-toc>
@@ -110,14 +138,14 @@
               <code>
                 &lt;gchatterjee-circle-toc number=&quot;1&quot; of=&quot;4&quot;
                 alignment=&quot;right&quot;&gt;<br />
-                &nbsp;&nbsp;&lt;span slot=&quot;section-title&quot;
-                href=&quot;https://www.example.com&quot;&gt;example.com&lt;/span&gt;<br />
-                &nbsp;&nbsp;&lt;span slot=&quot;section-title&quot;&gt;no
-                hyperlink&lt;/span&gt;<br />
-                &nbsp;&nbsp;&lt;span
-                slot=&quot;section-title&quot;&gt;&lt;/span&gt;<br />
-                &nbsp;&nbsp;&lt;span slot=&quot;section-title&quot;&gt;fourth
-                label&lt;/span&gt;<br />
+                &nbsp;&nbsp;&lt;a slot=&quot;section-title&quot;
+                href=&quot;https://www.example.com&quot;&gt;example.com&lt;/a&gt;<br />
+                &nbsp;&nbsp;&lt;a slot=&quot;section-title&quot;&gt;no
+                hyperlink&lt;/a&gt;<br />
+                &nbsp;&nbsp;&lt;a
+                slot=&quot;section-title&quot;&gt;&lt;/a&gt;<br />
+                &nbsp;&nbsp;&lt;a slot=&quot;section-title&quot;&gt;fourth
+                label&lt;/a&gt;<br />
                 &lt;/gchatterjee-circle-toc&gt;
               </code>
             </div>
@@ -132,12 +160,12 @@
                 alignment="right"
                 class="cold"
               >
-                <span slot="section-title" href="https://www.example.com">
+                <a slot="section-title" href="https://www.example.com">
                   example.com
-                </span>
-                <span slot="section-title">no hyperlink</span>
-                <span slot="section-title"></span>
-                <span slot="section-title">fourth label</span>
+                </a>
+                <a slot="section-title">no hyperlink</a>
+                <a slot="section-title"></a>
+                <a slot="section-title">fourth label</a>
               </gchatterjee-circle-toc>
             </div>
           </div>
@@ -173,8 +201,22 @@
             </div>
           </div>
         </gchatterjee-slide>
+        <gchatterjee-slide class="hot">
+          <div class="slide-contents">
+            <div class="demo demo-title">
+              <h2 class="title">gchatterjee-tile</h2>
+            </div>
+            <div class="demo demo-description"></div>
+            <div class="demo demo-code-block"></div>
+            <div class="demo demo-area cold">
+              <gchatterjee-tile class="warm" id="tile-demo">
+                <div slot="contents" id="tile-demo-text"></div>
+              </gchatterjee-tile>
+            </div>
+          </div>
+        </gchatterjee-slide>
       </gchatterjee-slide-container>
-    </div>
+    </div> -->
     <script src="index.js"></script>
   </body>
 </html>

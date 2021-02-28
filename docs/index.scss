@@ -50,7 +50,6 @@ body {
 code {
   font-family: $code-font, monospace;
   font-size: 0.93em;
-  color: darkslategrey;
   background-color: rgb(255, 255, 255, 0.25);
   background-clip: padding-box;
   border: 3px solid rgb(255, 255, 255, 0.25);
@@ -136,6 +135,18 @@ gchatterjee-slide {
       min-height: 200%;
     }
   }
+
+  #tile-demo {
+    border-top-width: 5px;
+    border-top-style: solid;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
 }
 
 gchatterjee-slide > a {
@@ -144,4 +155,8 @@ gchatterjee-slide > a {
   :visited {
     color: $color-warm;
   }
+}
+
+.top-bar {
+  font-size: 16pt;
 }
