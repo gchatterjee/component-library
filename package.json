@@ -7,7 +7,7 @@
     "lint": "prettier --write . && eslint --fix './**/*.js' && stylelint --fix './**/*.scss'",
     "build": "webpack",
     "docs": "cp dist/main.js* docs && sass docs/index.scss docs/index.css",
-    "prepublishOnly": "npm run lint && npm run test && npm run build"
+    "prepublishOnly": "npm run lint && npm run build"
   },
   "repository": {
     "type": "git",
