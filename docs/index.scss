@@ -159,4 +159,12 @@ gchatterjee-slide > a {
 
 .top-bar {
   font-size: 16pt;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+  }
 }

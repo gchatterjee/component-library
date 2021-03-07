@@ -7,7 +7,7 @@ body {
   margin: 0;
   width: 100%;
   height: 100%;
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
 }
 
 #container {
@@ -16,7 +16,7 @@ body {
 }
 
 .title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .cold {
@@ -50,7 +50,7 @@ body {
 }
 
 code {
-  font-family: 'Overpass Mono', monospace;
+  font-family: "Overpass Mono", monospace;
   font-size: 0.93em;
   background-color: rgba(255, 255, 255, 0.25);
   background-clip: padding-box;
@@ -145,6 +145,13 @@ gchatterjee-slide > a :visited {
 
 .top-bar {
   font-size: 16pt;
+}
+.top-bar a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
 }
 
 /*# sourceMappingURL=index.css.map */

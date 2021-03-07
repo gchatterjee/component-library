@@ -1,10 +1,9 @@
 {
   "name": "@gchatterjee/component-library",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "html5 custom component library",
   "main": "dist/main.js",
   "scripts": {
-    "test": "echo 'tests have not yet been configured'",
     "lint": "prettier --write . && eslint --fix './**/*.js' && stylelint --fix './**/*.scss'",
     "build": "webpack",
     "docs": "cp dist/main.js* docs && sass docs/index.scss docs/index.css",
