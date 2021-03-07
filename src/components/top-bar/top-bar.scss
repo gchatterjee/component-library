@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 3em;
+  height: 6em;
   width: 100%;
   transition: height 500ms;
   position: fixed;
@@ -20,5 +20,5 @@
 }
 
 :host(.collapsed) {
-  height: 2em;
+  height: 3em;
 }
