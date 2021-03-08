@@ -1,0 +1,24 @@
+:host {
+  height: 1em;
+  border: 0.1em solid black;
+  border-radius: 0.1em;
+  display: inline-flex;
+  justify-content: start;
+  align-items: center;
+
+  #bar {
+    background-color: black;
+    height: calc(100% - 0.2em);
+    margin: 0.1em;
+    width: 0;
+    transition: width 500ms;
+  }
+}
+
+:host(.dark-mode) {
+  border: 0.1em solid white;
+
+  #bar {
+    background-color: white;
+  }
+}

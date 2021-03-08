@@ -13,13 +13,9 @@ class TopBar extends HTMLElement {
   }
 
   connectedCallback() {
-    document.addEventListener('scroll', this.toggleCollapse.bind(this))
-  }
-
-  toggleCollapse() {
-    if (window.scrollY > 0 && !this.classList.contains('collapsed'))
-      this.classList.add('collapsed')
-    else if (window.scrollY === 0) this.classList.remove('collapsed')
+    document.addEventListener('scroll', () =>
+      this.classList[window.scrollY > 0 ? 'add' : 'remove']('collapsed')
+    )
   }
 }
 
